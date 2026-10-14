@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>Mi entrenamiento</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="widget" aria-label="Calendario mensual de entrenamiento">
+    <header class="intro">
+      <div class="title-line">
+        <span class="dumbbell" aria-hidden="true">💪</span>
+        <h1>Mi entrenamiento</h1>
+      </div>
+      <p>Marca los días en los que entrenaste. Cada mes comienza limpio.</p>
+    </header>
+
+    <section class="calendar-card">
+      <div class="calendar-top">
+        <div class="month-controls">
+          <button id="prev-month" class="nav-button" type="button" aria-label="Mes anterior">‹</button>
+          <h2 id="month-label" aria-live="polite">Cargando…</h2>
+          <button id="next-month" class="nav-button" type="button" aria-label="Mes siguiente">›</button>
+        </div>
+        <div class="summary" aria-live="polite">
+          <strong id="count">0 / 0</strong>
+          <span>días entrenados</span>
+        </div>
+      </div>
+
+      <div class="weekdays" aria-hidden="true">
+        <span>Lun</span><span>Mar</span><span>Mié</span><span>Jue</span>
+        <span>Vie</span><span>Sáb</span><span>Dom</span>
+      </div>
+      <div id="calendar" class="calendar-grid" role="group" aria-label="Días del mes"></div>
+
+      <footer class="calendar-footer">
+        <div class="legend">
+          <span class="legend-swatch done-swatch" aria-hidden="true">✓</span>
+          <span>Entrené</span>
+          <span class="legend-swatch" aria-hidden="true"></span>
+          <span>No entrené</span>
+        </div>
+        <span class="local-note"><span aria-hidden="true">↻</span> Se reinicia cada mes</span>
+      </footer>
+    </section>
+
+    <p class="privacy-note">Tus marcas se guardan solo en este navegador, no en Notion.</p>
+    <noscript>Activa JavaScript para usar el calendario.</noscript>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
